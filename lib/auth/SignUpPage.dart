@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:myapp/auth/login_page.dart';
 
 
 class SignUpPage extends StatelessWidget {
@@ -226,12 +225,7 @@ class SignUpPage extends StatelessWidget {
                             ),
                             InkWell(
                               onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => LoginPage(),
-                                  ),
-                                );
+                              Navigator.pop(context);
                               },
                               child: Text(
                                 "Masuk ke Akun",
@@ -240,6 +234,7 @@ class SignUpPage extends StatelessWidget {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                   decoration: TextDecoration.underline,
+                                  decorationColor: Colors.white, // Atur warna underline di sini
                                 ),
                               ),
                             ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+// import 'package:myapp/page/home/page_Home.dart';
 import 'package:myapp/auth/SignUpPage.dart';
+import 'package:myapp/page/main_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -18,7 +20,7 @@ class LoginPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 180),
+              const SizedBox(height: 160),
               Container(
                 margin: const EdgeInsets.only(left: 20, right: 20),
                 child: Column(
@@ -134,7 +136,12 @@ class LoginPage extends StatelessWidget {
                                 'Log In',
                                 style: TextStyle(fontSize: 16),
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push
+                                  (context, MaterialPageRoute(builder: (context) => const MainPage(),
+                                ),
+                                );
+                              },
                             ),
                           ),
                         ],
@@ -170,6 +177,7 @@ class LoginPage extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                                 decoration: TextDecoration.underline,
+                                decorationColor: Colors.white, // Atur warna underline di sini
                               ),
                             ),
                           ),
